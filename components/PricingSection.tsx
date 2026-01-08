@@ -1,9 +1,33 @@
 
 import React from 'react';
 import { ShieldCheck, Zap, Globe, Share2, TrendingUp, MessageCircle, Clock, Star } from 'lucide-react';
+import { Tooltip } from './Tooltip';
 
 export const PricingSection: React.FC = () => {
   const whatsappUrl = `https://wa.me/5511984808967?text=${encodeURIComponent("Tenho uma dúvida sobre os sermões.")}`;
+
+  const benefits = [
+    { 
+      icon: <Zap className="w-5 h-5" />, 
+      text: "Acesso Imediato via E-mail",
+      tooltip: "Envio automatizado assim que o pagamento for aprovado."
+    },
+    { 
+      icon: <Share2 className="w-5 h-5" />, 
+      text: "Arquivos 100% Editáveis e Adaptáveis",
+      tooltip: "Altere textos e estrutura no Word ou Google Docs para o seu estilo."
+    },
+    { 
+      icon: <TrendingUp className="w-5 h-5" />, 
+      text: "Material focado em Crescimento de Igreja",
+      tooltip: "Sermões estruturados para engajar e converter visitantes."
+    },
+    { 
+      icon: <Globe className="w-5 h-5" />, 
+      text: "Pague uma vez, acesse para sempre",
+      tooltip: "Sem mensalidades. O conteúdo é seu para sempre."
+    }
+  ];
 
   return (
     <section id="preço" className="py-24 bg-gradient-soft overflow-hidden">
@@ -16,7 +40,6 @@ export const PricingSection: React.FC = () => {
         </div>
 
         <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-visible flex flex-col md:flex-row border border-gray-100 relative">
-          {/* Banner de Destaque Superior */}
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-500 text-white px-6 py-2 rounded-full font-bold shadow-lg z-10 flex items-center gap-2 animate-bounce">
             <Star size={18} fill="currentColor" />
             OFERTA POR TEMPO LIMITADO
@@ -26,25 +49,26 @@ export const PricingSection: React.FC = () => {
           <div className="md:w-3/5 p-8 lg:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 underline decoration-teal-500 underline-offset-8">Acesso Vitalício: 50 Sermões</h3>
             <div className="space-y-4 mb-8">
-              {[
-                { icon: <Zap className="w-5 h-5" />, text: "Acesso Imediato via E-mail" },
-                { icon: <Share2 className="w-5 h-5" />, text: "Arquivos 100% Editáveis e Adaptáveis" },
-                { icon: <TrendingUp className="w-5 h-5" />, text: "Material focado em Crescimento de Igreja" },
-                { icon: <Globe className="w-5 h-5" />, text: "Pague uma vez, acesse para sempre" }
-              ].map((item, i) => (
+              {benefits.map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-gray-700">
                   <div className="text-teal-600">{item.icon}</div>
-                  <span className="font-medium">{item.text}</span>
+                  <Tooltip text={item.tooltip}>
+                    <span className="font-medium border-b border-dotted border-gray-300">{item.text}</span>
+                  </Tooltip>
                 </div>
               ))}
             </div>
-            <div className="p-4 bg-teal-50 rounded-xl flex items-center gap-4 mb-6 border border-teal-100">
-              <ShieldCheck className="w-8 h-8 text-teal-600" />
-              <div>
-                <p className="text-sm font-bold text-teal-900">Garantia Blindada de 7 Dias</p>
-                <p className="text-xs text-teal-800/70">Risco zero. Satisfação total ou seu investimento de volta.</p>
+            
+            <Tooltip text="Risco Zero: Teste por 7 dias. Se não gostar, devolvemos seu dinheiro integralmente.">
+              <div className="p-4 bg-teal-50 rounded-xl flex items-center gap-4 mb-6 border border-teal-100 cursor-help transition-colors hover:bg-teal-100">
+                <ShieldCheck className="w-8 h-8 text-teal-600" />
+                <div>
+                  <p className="text-sm font-bold text-teal-900">Garantia Blindada de 7 Dias</p>
+                  <p className="text-xs text-teal-800/70">Clique para saber mais sobre nossa política.</p>
+                </div>
               </div>
-            </div>
+            </Tooltip>
+
             <a 
               href={whatsappUrl} 
               target="_blank" 
@@ -57,7 +81,6 @@ export const PricingSection: React.FC = () => {
           </div>
           
           <div className="md:w-2/5 bg-teal-600 p-8 lg:p-12 text-white flex flex-col justify-center items-center text-center relative overflow-hidden">
-            {/* Background pattern for depth */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
             
             <div className="inline-flex items-center gap-2 bg-teal-500 text-white px-3 py-1 rounded-md text-xs font-bold uppercase mb-4 tracking-tighter ring-1 ring-white/20">

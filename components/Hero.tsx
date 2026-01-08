@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Tooltip } from './Tooltip';
 
 export const Hero: React.FC = () => {
   return (
@@ -27,10 +28,16 @@ export const Hero: React.FC = () => {
               Saber Mais
             </a>
           </div>
-          <div className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm text-gray-500">
-            <span className="flex items-center gap-1">✅ Acesso Imediato</span>
-            <span className="flex items-center gap-1">✅ 100% Digital</span>
-            <span className="flex items-center gap-1">✅ Garantia Incondicional</span>
+          <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500">
+            <Tooltip text="Você receberá o acesso em seu e-mail segundos após a confirmação do pagamento.">
+              <span className="flex items-center gap-1 border-b border-dotted border-gray-300">✅ Acesso Imediato</span>
+            </Tooltip>
+            <Tooltip text="Receba arquivos em PDF e Word (Editável) para usar no celular ou computador.">
+              <span className="flex items-center gap-1 border-b border-dotted border-gray-300">✅ 100% Digital</span>
+            </Tooltip>
+            <Tooltip text="Satisfação total ou seu dinheiro de volta em até 7 dias, sem burocracia.">
+              <span className="flex items-center gap-1 border-b border-dotted border-gray-300">✅ Garantia Incondicional</span>
+            </Tooltip>
           </div>
         </div>
         <div className="flex-1 relative">
