@@ -5,6 +5,7 @@ import { Tooltip } from './Tooltip';
 
 export const PricingSection: React.FC = () => {
   const whatsappUrl = `https://wa.me/5511984808967?text=${encodeURIComponent("Tenho uma dúvida sobre os sermões.")}`;
+  const checkoutUrl = "https://pay.kiwify.com.br/6ghqN34";
 
   const benefits = [
     { 
@@ -97,9 +98,14 @@ export const PricingSection: React.FC = () => {
               <p className="text-teal-100 mt-2 font-medium">Pagamento único</p>
             </div>
 
-            <button className="w-full py-5 px-6 bg-white text-teal-700 font-black rounded-xl hover:bg-teal-50 transition-all shadow-xl text-lg uppercase tracking-tight transform hover:scale-105 active:scale-95">
+            <a 
+              href={checkoutUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-5 px-6 bg-white text-teal-700 font-black rounded-xl hover:bg-teal-50 transition-all shadow-xl text-lg uppercase tracking-tight transform hover:scale-105 active:scale-95 text-center"
+            >
               APROVEITAR ESTA OFERTA
-            </button>
+            </a>
             
             <div className="mt-6 flex flex-col gap-2 opacity-80">
               <p className="text-[10px] uppercase font-bold tracking-widest">Cartão, Pix ou Boleto</p>

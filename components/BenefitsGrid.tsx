@@ -4,9 +4,9 @@ import { CheckCircle2 } from 'lucide-react';
 
 export const BenefitsGrid: React.FC = () => {
   const benefits = [
-    { title: "Mais Tempo para Oração", desc: "Ganha tempo valioso para se conectar com Deus.", img: "https://picsum.photos/seed/pray/600/400" },
-    { title: "Segurança ao Ministrar", desc: "Pregue com a confiança de quem está bem preparado.", img: "https://picsum.photos/seed/preach/600/400" },
-    { title: "Mensagens Impactantes", desc: "Comunique a Palavra de forma clara e poderosa.", img: "https://picsum.photos/seed/impact/600/400" },
+    { title: "Mais Tempo para Oração", desc: "Ganha tempo valioso para se conectar com Deus.", img: "https://picsum.photos/seed/pray/600/400.webp" },
+    { title: "Segurança ao Ministrar", desc: "Pregue com a confiança de quem está bem preparado.", img: "https://picsum.photos/seed/preach/600/400.webp" },
+    { title: "Mensagens Impactantes", desc: "Comunique a Palavra de forma clara e poderosa.", img: "https://picsum.photos/seed/impact/600/400.webp" },
   ];
 
   const details = [
@@ -33,7 +33,17 @@ export const BenefitsGrid: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
           {benefits.map((b, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-soft hover:-translate-y-2 transition duration-300">
-              <img src={b.img} alt={b.title} className="w-full h-48 object-cover" />
+              <div className="bg-gray-100 h-48 w-full">
+                <img 
+                  src={b.img} 
+                  alt={b.title} 
+                  className="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                  width="600"
+                  height="400"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{b.title}</h3>
                 <p className="text-gray-600">{b.desc}</p>

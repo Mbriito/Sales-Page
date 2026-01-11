@@ -3,6 +3,8 @@ import React from 'react';
 import { Tooltip } from './Tooltip';
 
 export const Hero: React.FC = () => {
+  const checkoutUrl = "https://pay.kiwify.com.br/6ghqN34";
+
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
@@ -21,10 +23,15 @@ export const Hero: React.FC = () => {
             otimizando o tempo de preparação semanal.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#preço" className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-lg shadow-teal-600/20 transition transform hover:-translate-y-1 text-lg">
+            <a 
+              href={checkoutUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-lg shadow-teal-600/20 transition transform hover:-translate-y-1 text-lg text-center"
+            >
               Quero Acessar os 50 Sermões
             </a>
-            <a href="#solucao" className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 font-bold rounded-xl border border-gray-200 transition text-lg">
+            <a href="#solucao" className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 font-bold rounded-xl border border-gray-200 transition text-lg text-center">
               Saber Mais
             </a>
           </div>
@@ -41,11 +48,15 @@ export const Hero: React.FC = () => {
           </div>
         </div>
         <div className="flex-1 relative">
-          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl bg-gray-100 aspect-[4/3]">
             <img 
-              src="https://picsum.photos/seed/church/800/600" 
+              src="https://picsum.photos/seed/church/800/600.webp" 
               alt="Pastor pregando com esboço de sermão pronto" 
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover"
+              width="800"
+              height="600"
+              loading="eager"
+              decoding="async"
             />
           </div>
           <div className="absolute -top-6 -right-6 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl"></div>
