@@ -1,54 +1,100 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary Meta Tags -->
-    <title>Pregações de Excelência | 50 Sermões Prontos e Impactantes</title>
-    <meta name="title" content="Pregações de Excelência | 50 Sermões Prontos e Impactantes">
-    <meta name="description" content="Acesse 50 pregações prontas e esboços bíblicos profundos para líderes evangélicos. Economize tempo de estudo e foque no pastoreio com mensagens que transformam vidas.">
-    <meta name="keywords" content="pregações prontas, esboços de sermões, estudos bíblicos, ministério pastoral, liderança cristã, sermões evangélicos, apoio ministerial">
-    <meta name="author" content="Pregações de Excelência">
+    <title>Pregações de Excelência | 50 Esboços + 50 Pregações para Mulheres</title>
+    <meta name="description" content="Economize Horas de Preparação e Pregue com Ousadia. Receba 50 Esboços Completos + 50 Pregações Exclusivas para Círculo de Oração e Mulheres.">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pregacoesdeexcelencia.com.br/">
-    <meta property="og:title" content="Pregações de Excelência | 50 Sermões Prontos">
-    <meta property="og:description" content="Acesse 50 pregações prontas e esboços bíblicos profundos para líderes evangélicos.">
-    <meta property="og:image" content="https://picsum.photos/seed/church/1200/630">
+    <!-- Meta Pixel & Conversions API Script -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pregacoesdeexcelencia.com.br/">
-    <meta property="twitter:title" content="Pregações de Excelência | 50 Sermões Prontos">
-    <meta property="twitter:description" content="Acesse 50 pregações prontas e esboços bíblicos profundos para líderes evangélicos.">
-    <meta property="twitter:image" content="https://picsum.photos/seed/church/1200/630">
+      // ID do Pixel do Facebook (Substitua facilmente aqui pelo seu ID do Gerenciador de Anúncios)
+      window.FB_PIXEL_ID = window.FB_PIXEL_ID || '1234567890123456';
+
+      fbq('init', window.FB_PIXEL_ID);
+      fbq('track', 'PageView');
+
+      // Função de disparo para cliques no Checkout (InitiateCheckout) com EventID para deduplicação com a API de Conversões
+      window.trackInitiateCheckout = function(productName, value) {
+        if (typeof window.fbq === 'function') {
+          var eventId = 'init_checkout_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
+          window.fbq('track', 'InitiateCheckout', {
+            content_name: productName || 'Combo 100 Esboços de Pregação',
+            content_category: 'E-book Ministerial',
+            value: typeof value === 'number' ? value : 19.99,
+            currency: 'BRL',
+            num_items: 1
+          }, { eventID: eventId });
+          console.log('[Meta Pixel] Evento InitiateCheckout enviado com sucesso:', productName, 'R$', value, 'EventID:', eventId);
+        }
+      };
+
+      // Rastreamento automático de cliques em links de checkout da Kiwify
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.addEventListener('click', function(e) {
+          var target = e.target.closest('a');
+          if (target && target.href && (target.href.indexOf('pay.kiwify.com.br') !== -1 || target.dataset.trackCheckout)) {
+            var prodName = target.dataset.productName || target.innerText || 'Combo 100 Esboços';
+            var prodVal = parseFloat(target.dataset.productValue) || 19.99;
+            window.trackInitiateCheckout(prodName.trim(), prodVal);
+          }
+        });
+      });
+    </script>
+    <!-- End Meta Pixel Code (Script) -->
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .text-gradient {
+            background: linear-gradient(to right, #fbbf24, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        h1, h2, h3, .serif {
-            font-family: 'Playfair Display', serif;
+
+        .cta-pulse {
+            animation: pulse-button 2s infinite;
         }
-        .bg-gradient-soft {
-            background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+
+        @keyframes pulse-button {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(13, 148, 136, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
         }
-        .shadow-soft {
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: all 0.3s ease;
         }
-        @keyframes pulse-whatsapp {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            background-color: #128c7e;
         }
-        .animate-whatsapp {
-            animation: pulse-whatsapp 2s infinite;
-        }
+
+        details summary::-webkit-details-marker { display: none; }
     </style>
 <script type="importmap">
 {
@@ -56,12 +102,20 @@
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
+    <!-- Meta Pixel Fallback Noscript -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1234567890123456&ev=PageView&noscript=1" />
+    </noscript>
     <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
