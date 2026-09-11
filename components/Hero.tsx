@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircle2, Star, Shield, Clock, Tablet, Smartphone, Laptop, Sparkles, ArrowDown, Zap, Upload, Image as ImageIcon } from 'lucide-react';
+import defaultMockup from '../src/assets/images/ebook_mockup_banner_1789086885609.jpg';
 
 interface HeroProps {
   flashTimeLeft?: { minutes: string; seconds: string };
@@ -10,7 +11,7 @@ export const Hero: React.FC<HeroProps> = ({
   flashTimeLeft = { minutes: '04', seconds: '59' },
   checkoutUrl = "https://pay.kiwify.com.br/6ghqN34"
 }) => {
-  const [mockupImage, setMockupImage] = useState<string>("/src/assets/images/ebook_devices_mockup_1785285805027.jpg");
+  const [mockupImage, setMockupImage] = useState<string>(defaultMockup);
   const [showImageInput, setShowImageInput] = useState<boolean>(false);
   const [customImageUrl, setCustomImageUrl] = useState<string>("");
 
