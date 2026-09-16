@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ContentSection } from './components/ContentSection';
+import { WebAppSection } from './components/WebAppSection';
 import { Testimonials } from './components/Testimonials';
 import { OfferSection } from './components/OfferSection';
+import { ExclusiveBonusSection } from './components/ExclusiveBonusSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
@@ -84,21 +86,31 @@ export const App: React.FC = () => {
         checkoutUrl={checkoutUrl}
       />
 
-      {/* 2. SEÇÃO DE ESPECIFICIDADE (O que a pessoa vai receber) */}
+      {/* 2. SEÇÃO DE ESPECIFICIDADE (Apresentação do Produto Principal) */}
       <ContentSection 
         checkoutUrl={checkoutUrl}
       />
 
-      {/* 3. SEÇÃO DE PROVA SOCIAL (Unificada: Avaliações Escritas, Vídeos e Prints do WhatsApp) */}
+      {/* 3. BÔNUS EXCLUSIVOS (3 Bônus logo abaixo da apresentação do produto principal) */}
+      <ExclusiveBonusSection 
+        checkoutUrl={checkoutUrl} 
+      />
+
+      {/* 4. WEB APP INTERATIVO: ÁREA EXCLUSIVA PARA ALUNAS (Mulher Plena & Restaurada - 50 Temas) */}
+      <WebAppSection 
+        checkoutUrl={checkoutUrl}
+      />
+
+      {/* 5. SEÇÃO DE PROVA SOCIAL (Unificada: Avaliações Escritas, Vídeos e Prints do WhatsApp) */}
       <Testimonials />
 
-      {/* OFERTA IRRESISTÍVEL & CRONÔMETRO DE DESCONTO */}
+      {/* 6. OFERTA IRRESISTÍVEL & CRONÔMETRO DE DESCONTO */}
       <OfferSection 
         timeLeft={timeLeft} 
         flashTimeLeft={flashTimeLeft} 
       />
 
-      {/* GARANTIA DE 7 DIAS RISCO ZERO */}
+      {/* 7. GARANTIA DE 7 DIAS RISCO ZERO */}
       <GuaranteeSection />
 
       {/* 4. SEÇÃO DE QUEBRA DE OBJEÇÕES (FAQ em Sanfona / Accordion) */}

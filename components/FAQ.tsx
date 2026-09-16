@@ -40,12 +40,16 @@ export const FAQ: React.FC = () => {
 
   const faqs = [
     {
-      question: "Como vou receber o material?",
-      answer: "O acesso é 100% digital. Você receberá um e-mail com o link para baixar o material imediatamente após a confirmação do pagamento."
+      question: "Como vou receber o material e o Web App das alunas?",
+      answer: "O acesso é 100% digital e imediato. Assim que o pagamento for aprovado (PIX ou Cartão), você recebe no seu e-mail tanto os links de download dos e-books em Word (.docx) e PDF, quanto o seu login pessoal para acessar o Web App 'Mulher Plena & Restaurada' com os 50 temas organizados no celular, tablet ou computador."
     },
     {
-      question: "É livro físico?",
-      answer: "Não, é um E-book em formato PDF. Isso permite que você leia direto no celular, tablet, computador ou imprima se preferir."
+      question: "Como funciona o Web App no celular? Preciso baixar algo pesado?",
+      answer: "Não precisa baixar nada pesado nem ocupar a memória do seu smartphone! O Web App funciona diretamente pelo navegador do celular e você pode adicioná-lo à sua tela de início com 1 toque como se fosse um aplicativo nativo. Rápido, leve e com busca instantânea de mensagens."
+    },
+    {
+      question: "É livro físico ou digital?",
+      answer: "É um material digital completo (Web App interativo + E-books em PDF e Word editável). Isso dá a você flexibilidade total: pode ler no púlpito no celular, copiar os esboços em 1 clique ou imprimir as folhas do Planner Oficial para sua pasta de culto."
     },
     {
       question: "Quais as formas de pagamento?",

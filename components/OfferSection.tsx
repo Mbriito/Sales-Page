@@ -169,7 +169,7 @@ export const OfferSection: React.FC<OfferProps> = ({
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0" /> <strong>50 Temas de Culto para Mulheres</strong></li>
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0" /> Total de 100 Mensagens Bíblicas Prontas</li>
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0" /> Editáveis no Word (.docx) e Leitura em PDF</li>
-                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0" /> Bônus: Guia de Oratória & Ilustrações</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0" /> <strong>Inclusos os 3 Bônus Exclusivos</strong></li>
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0" /> Suporte VIP no WhatsApp</li>
               </ul>
             </div>

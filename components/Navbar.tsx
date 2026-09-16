@@ -67,9 +67,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Links Rápidos Desktop */}
           <nav className="hidden lg:flex items-center space-x-6 text-xs uppercase tracking-wider font-bold text-slate-200">
             <a href="#especificidade" className="hover:text-amber-300 transition">O Que Você Recebe</a>
+            <a href="#webapp" className="hover:text-amber-300 transition text-rose-300 font-extrabold flex items-center gap-1">
+              <span>Web App Alunas</span>
+              <span className="bg-rose-500 text-white text-[9px] px-1.5 py-0.2 rounded font-black">50 Temas</span>
+            </a>
             <a href="#depoimentos" className="hover:text-amber-300 transition">Depoimentos</a>
-            <a href="#faq" className="hover:text-amber-300 transition">Perguntas Frequentes</a>
-            <a href="#oferta" className="hover:text-amber-300 transition text-amber-400">Garantir E-books</a>
+            <a href="#oferta" className="hover:text-amber-300 transition">Oferta</a>
+            <a href="#bonus" className="hover:text-amber-300 transition text-amber-300 font-extrabold flex items-center gap-1">
+              <span>Bônus</span>
+              <span className="bg-amber-400 text-slate-950 text-[9px] px-1.5 py-0.2 rounded font-black">Grátis</span>
+            </a>
+            <a href="#faq" className="hover:text-amber-300 transition">Dúvidas</a>
           </nav>
 
           {/* Botão de Ação Direta no Topo */}
